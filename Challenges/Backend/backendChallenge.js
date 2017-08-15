@@ -48,9 +48,6 @@ function validateCustomerPage(page)
 {
   if (!page)
   {
-    console.log("a");
-
-
     //TODO error handle
     console.log("page is falsy from inside validate customer page.");
     return;
@@ -78,10 +75,6 @@ function validateCustomerPage(page)
 
       if (validation.required && !page.customers[i].hasOwnProperty(nameOfField) )  //if field is required and not present. also quick because of short-circuit. note that this DOES NOT work for inherited properties, but is faster than using "in" which is alternate
       {
-
-        console.log("aaa");
-
-
         //TODO
         //console.log
         reportInvalidCustomerFields(page.customers[i], nameOfField);
@@ -93,12 +86,8 @@ function validateCustomerPage(page)
         //if the customer data is null, cannot get length, therefore must check first
         var strlen;
         page.customers[i][nameOfField] ? strlen = page.customers[i][nameOfField].length : reportInvalidCustomerFields(page.customers[i], nameOfField);
-        //var strlen = page.customers[i][nameOfField].length || reportInvalidCustomerFields(page.customers[i], nameOfField);
         if (strlen >  validation.length.max || strlen < validation.length.min) //If length is greater than max, or lesser than min. short-circuit works properly
         {
-
-          console.log("aaaa");
-
           //TODO
           //console.log
           reportInvalidCustomerFields(page.customers[i], nameOfField);
@@ -110,8 +99,6 @@ function validateCustomerPage(page)
         if (validation.type !== typeof(page.customers[i][nameOfField]))    //else if because length assumes string meaning if length exists, it can be assumed to be a string.
         //above statement: if the given validation type constraint matches the type of the customers data
         {
-          console.log("aaaaa");
-
           //TODO
           //console.log
           reportInvalidCustomerFields(page.customers[i], nameOfField);
@@ -123,7 +110,7 @@ function validateCustomerPage(page)
 
 function reportInvalidCustomerFields(customer, field)
 {
-  if (customer.id === output.invalid_customers[output.invalid_customers.length - 1])
+  if (output.invalid_customers.length > 0 && customer.id === (output.invalid_customers[output.invalid_customers.length - 1].id))
   {
     output.invalid_customers[output.invalid_customers.length - 1].invalid_fields.push(field);
   }
@@ -133,13 +120,10 @@ function reportInvalidCustomerFields(customer, field)
   }
 }
 
-/*
+
 for (var i = 0; i < pages.length; ++i)
 {
   validateCustomerPage(pages[i]);
 }
-*/
 
-validateCustomerPage(pages[0]);
-validateCustomerPage(pages[1]);
 console.log(output);
