@@ -1,0 +1,44 @@
+preprocessing
+set of required fields
+  check if equivalent (speed)
+
+
+check req'd are there
+check correct value type
+check length
+
+for pageIdx in pages
+{
+  for customer in pageIdx
+  {
+    for idx in validationArray
+    {
+      if (idx.required && !customer.hasProperty(idx))     //if the field is required and the customer doesn't have the field
+      {
+        //add customer to invalid customers w/ param idx
+      }
+
+      if (idx.length)
+      {
+        if (customer.idx.length > idx.length.max)
+        {
+          //add customer to invalid customers with param idx
+        }
+
+        else if (customer.idx.length < min)
+        {
+          //add customer to invalid customers with param idx
+        }
+      }
+
+      if (idx.type)     //if idx.type exists
+      {
+        if (typeof(customer.idx) !== idx.type)      //if the customer's value at the idx doesn't match the string for the proper type
+        {
+          //add customer to invalid customers with param idx
+        }
+      }
+
+    }
+  }
+}
