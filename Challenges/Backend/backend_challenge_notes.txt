@@ -3,6 +3,11 @@
   http://api.jquery.com/jQuery.getJSON/
 
 
+Have get url have an optional callback
+
+gotta get the validation keys
+Object.entries(pages[0].validations[0])[0][0]
+
 2.  validate the customers
 
 optimise:
