@@ -13,3 +13,8 @@ Response Status Code: 200
 Response Headers: {"server":"Cowboy","date":"Fri, 08 Sep 2017 21:03:31 GMT","connection":"close","x-frame-options":"SAMEORIGIN","x-xss-protection":"1; mode=block","x-content-type-options":"nosniff","content-type":"application/json; charset=utf-8","etag":"W/\"de2d13c3a4f5269295f5ceec70649c3b\"","cache-control":"max-age=0, private, must-revalidate","x-request-id":"f45b8d2c-c1af-4111-beb0-dfce507f3968","x-runtime":"0.002730","transfer-encoding":"chunked","via":"1.1 vegur"}
 end of log at: 1504904612458
 
+Date: 1504909416708
+Response Status Code: 200
+Response Headers: {"server":"Cowboy","date":"Fri, 08 Sep 2017 22:23:36 GMT","connection":"close","x-frame-options":"SAMEORIGIN","x-xss-protection":"1; mode=block","x-content-type-options":"nosniff","content-type":"application/json; charset=utf-8","etag":"W/\"de2d13c3a4f5269295f5ceec70649c3b\"","cache-control":"max-age=0, private, must-revalidate","x-request-id":"232f2353-fff4-4c08-b3d7-2b007eb5f8fe","x-runtime":"0.004462","transfer-encoding":"chunked","via":"1.1 vegur"}
+end of log at: 1504909416708
+
