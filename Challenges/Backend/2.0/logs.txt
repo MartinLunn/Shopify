@@ -1,0 +1,15 @@
+Date: 1504904529145
+Response Status Code: 200
+Response Headers: {"server":"Cowboy","date":"Fri, 08 Sep 2017 21:02:08 GMT","connection":"close","x-frame-options":"SAMEORIGIN","x-xss-protection":"1; mode=block","x-content-type-options":"nosniff","content-type":"application/json; charset=utf-8","etag":"W/\"de2d13c3a4f5269295f5ceec70649c3b\"","cache-control":"max-age=0, private, must-revalidate","x-request-id":"cbbc1789-8be2-4975-b18b-501eb027c5e8","x-runtime":"0.002675","transfer-encoding":"chunked","via":"1.1 vegur"}
+end of log at: 1504904529145
+
+Date: 1504904553540
+Response Status Code: 200
+Response Headers: {"server":"Cowboy","date":"Fri, 08 Sep 2017 21:02:33 GMT","connection":"close","x-frame-options":"SAMEORIGIN","x-xss-protection":"1; mode=block","x-content-type-options":"nosniff","content-type":"application/json; charset=utf-8","etag":"W/\"de2d13c3a4f5269295f5ceec70649c3b\"","cache-control":"max-age=0, private, must-revalidate","x-request-id":"916cd8f9-6206-4472-889b-7a69987ad96e","x-runtime":"0.002461","transfer-encoding":"chunked","via":"1.1 vegur"}
+end of log at: 1504904553540
+
+Date: 1504904612458
+Response Status Code: 200
+Response Headers: {"server":"Cowboy","date":"Fri, 08 Sep 2017 21:03:31 GMT","connection":"close","x-frame-options":"SAMEORIGIN","x-xss-protection":"1; mode=block","x-content-type-options":"nosniff","content-type":"application/json; charset=utf-8","etag":"W/\"de2d13c3a4f5269295f5ceec70649c3b\"","cache-control":"max-age=0, private, must-revalidate","x-request-id":"f45b8d2c-c1af-4111-beb0-dfce507f3968","x-runtime":"0.002730","transfer-encoding":"chunked","via":"1.1 vegur"}
+end of log at: 1504904612458
+
