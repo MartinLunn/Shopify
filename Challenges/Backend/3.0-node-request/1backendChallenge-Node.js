@@ -95,11 +95,15 @@ let callback = function(numPages)
       validateCustomerPage(pages[i]);
     }
 
-    console.log(output);
-    for (var i = 0; i < output.invalid_customers.length; ++i)
+    //console.log(output);
+
+    printOutput(output);
+
+
+    /*for (var i = 0; i < output.invalid_customers.length; ++i)
     {
-      console.log(output.invalid_customers[i] + "\n\n\n");      //TODO I'M HERE NOW, NEED TO PUT IT AS A STRING
-    }
+      console.log(JSON.stringify(output.invalid_customers[i]) + "\n");      //TODO I'M HERE NOW, NEED TO PUT IT AS A STRING
+    }*/
     return;
   }
 }
@@ -109,7 +113,7 @@ let callback = function(numPages)
 
 calculateTotalPages(apiEndpointURL);
 
-function validateCustomerPage(page)
+let validateCustomerPage = function(page)
 {
   if (!page)
   {
@@ -173,7 +177,7 @@ function validateCustomerPage(page)
   }
 }
 
-function reportInvalidCustomerFields(customer, field)
+let reportInvalidCustomerFields = function (customer, field)
 {
   if (output.invalid_customers.length > 0 && customer.id === (output.invalid_customers[output.invalid_customers.length - 1].id))
   {
@@ -183,4 +187,62 @@ function reportInvalidCustomerFields(customer, field)
   {
     output.invalid_customers.push({"id": customer.id, "invalid_fields": [field]});
   }
+}
+
+let printOutput = function(output)      /*console.log() wasn't playing nice
+it was outputting [Object object] if I passed in anything but exactly one object
+I decided to do my own.*/
+{
+  if (!output)
+  {
+    console.log("Output is null from inside printOutput.\n");
+    return;
+  }
+
+  if (typeof(output) !== "object")
+  {
+    console.log("Output is not an object from inside printOutput. \n");
+    return;
+  }
+
+  if (!output.hasOwnProperty("invalid_customers"))
+  {
+    console.log("Output is not properly formatted from inside printOutput. \n");
+    return;
+  }
+
+  if (!Array.isArray(output.invalid_customers))
+  {
+    console.log("Invalid customers is not an array from inside printOutput. \n");
+    return;
+  }
+
+
+
+  if (output.invalid_customers.length === 0)
+  {
+    console.log("There are no invalid customers.");
+  }
+
+  console.log("{\n   \"invalid_customers\": [");
+
+  for (let i = 0; i < output.invalid_customers.length; ++i)
+  {
+    if (typeof(output.invalid_customers[i]) !== "object")
+    {
+      console.log("output.invalid_customers[" + i + "] is not an object from inside printOutput.\n")
+      continue;
+    }
+
+    if (i === output.invalid_customers.length)
+    {
+      console.log(output.invalid_customers[i]);
+    }
+
+    process.stdout.write("      ");
+    console.log(output.invalid_customers[i]);
+    //process.stdout.write(",");
+  }
+
+  console.log("   ]\n}\n\n");
 }
