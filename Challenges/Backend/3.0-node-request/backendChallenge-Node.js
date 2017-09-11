@@ -37,6 +37,7 @@ let callback = function(numPages)
   //don't need the 1st page, already got!
   for (let i = 1; i < numPages; ++i)
   {
+
     request(apiEndpointURL + i, function (error, response, body) {
       if (error)
       {
@@ -44,12 +45,17 @@ let callback = function(numPages)
         return;
       }
 
-      console.log('statusCode:', response && response.statusCode);
-      console.log('body: ', body + "\n\n");
+      //console.log('statusCode:', response && response.statusCode);
+      //console.log('body: ', body + "\n\n");
       //getting the 0th page of input data
       pages[i] = (JSON.parse(body));
+      //pages[i] = (body);
     });
+    console.log("i :" + i + "\n");
+    console.log(pages);
   }
+
+  console.log(pages);
 }
 
 
@@ -70,9 +76,11 @@ let calculateTotalPages = function(apiEndpointURL)
       return;
     }
 
-    console.log('statusCode:', response && response.statusCode);
-    console.log('body: ', body + "\n\n");
+    //console.log('statusCode:', response && response.statusCode);
+    //console.log('body: ', body + "\n\n");
     //getting the 0th page of input data
+    //pages[0] = (JSON.parse(body));
+    pages = [];
     pages.push(JSON.parse(body));
 
     let numPages = Math.ceil(pages[0].pagination.total / pages[0].pagination.per_page);
@@ -84,7 +92,7 @@ let calculateTotalPages = function(apiEndpointURL)
 
 calculateTotalPages(apiEndpointURL);
 
-console.log(pages);
+
 /*
 //works: Math.ceil(page0.pagination.total / page0.pagination.per_page);
 //JSON.parse('{"result":1}')        don't forget the '' outside the braces

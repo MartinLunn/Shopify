@@ -1,0 +1,11 @@
+I'm having trouble with the async callback stuff.
+
+This is a little slow, but very reliable.
+
+get 0th page -> calculateTotalPages
+if currentPage < numPages
+  make request
+    callback: update currentPage-> make another request
+
+  else
+    return
