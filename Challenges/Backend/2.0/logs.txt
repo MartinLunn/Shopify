@@ -1,20 +1,152 @@
-Date: 1504904529145
+Date: 1504980152003
 Response Status Code: 200
-Response Headers: {"server":"Cowboy","date":"Fri, 08 Sep 2017 21:02:08 GMT","connection":"close","x-frame-options":"SAMEORIGIN","x-xss-protection":"1; mode=block","x-content-type-options":"nosniff","content-type":"application/json; charset=utf-8","etag":"W/\"de2d13c3a4f5269295f5ceec70649c3b\"","cache-control":"max-age=0, private, must-revalidate","x-request-id":"cbbc1789-8be2-4975-b18b-501eb027c5e8","x-runtime":"0.002675","transfer-encoding":"chunked","via":"1.1 vegur"}
-end of log at: 1504904529145
+Response Headers: {
+	"server": "Cowboy",
+	"date": "Sat, 09 Sep 2017 18:02:31 GMT",
+	"connection": "close",
+	"x-frame-options": "SAMEORIGIN",
+	"x-xss-protection": "1; mode=block",
+	"x-content-type-options": "nosniff",
+	"content-type": "application/json; charset=utf-8",
+	"etag": "W/\"de2d13c3a4f5269295f5ceec70649c3b\"",
+	"cache-control": "max-age=0, private, must-revalidate",
+	"x-request-id": "dc28cf08-4968-4540-802f-0c4e25ebd9b8",
+	"x-runtime": "0.003766",
+	"transfer-encoding": "chunked",
+	"via": "1.1 vegur"
+}
+end of log at: 1504980152003
 
-Date: 1504904553540
+Date: 1504980196077
 Response Status Code: 200
-Response Headers: {"server":"Cowboy","date":"Fri, 08 Sep 2017 21:02:33 GMT","connection":"close","x-frame-options":"SAMEORIGIN","x-xss-protection":"1; mode=block","x-content-type-options":"nosniff","content-type":"application/json; charset=utf-8","etag":"W/\"de2d13c3a4f5269295f5ceec70649c3b\"","cache-control":"max-age=0, private, must-revalidate","x-request-id":"916cd8f9-6206-4472-889b-7a69987ad96e","x-runtime":"0.002461","transfer-encoding":"chunked","via":"1.1 vegur"}
-end of log at: 1504904553540
+Response Headers: {
+	"server": "Cowboy",
+	"date": "Sat, 09 Sep 2017 18:03:15 GMT",
+	"connection": "close",
+	"x-frame-options": "SAMEORIGIN",
+	"x-xss-protection": "1; mode=block",
+	"x-content-type-options": "nosniff",
+	"content-type": "application/json; charset=utf-8",
+	"etag": "W/\"de2d13c3a4f5269295f5ceec70649c3b\"",
+	"cache-control": "max-age=0, private, must-revalidate",
+	"x-request-id": "4c875331-f386-406b-8fff-f76754a686e9",
+	"x-runtime": "0.004338",
+	"transfer-encoding": "chunked",
+	"via": "1.1 vegur"
+}
+end of log at: 1504980196077
 
-Date: 1504904612458
+Date: 1504980228535
 Response Status Code: 200
-Response Headers: {"server":"Cowboy","date":"Fri, 08 Sep 2017 21:03:31 GMT","connection":"close","x-frame-options":"SAMEORIGIN","x-xss-protection":"1; mode=block","x-content-type-options":"nosniff","content-type":"application/json; charset=utf-8","etag":"W/\"de2d13c3a4f5269295f5ceec70649c3b\"","cache-control":"max-age=0, private, must-revalidate","x-request-id":"f45b8d2c-c1af-4111-beb0-dfce507f3968","x-runtime":"0.002730","transfer-encoding":"chunked","via":"1.1 vegur"}
-end of log at: 1504904612458
+Response Headers: {
+	"server": "Cowboy",
+	"date": "Sat, 09 Sep 2017 18:03:47 GMT",
+	"connection": "close",
+	"x-frame-options": "SAMEORIGIN",
+	"x-xss-protection": "1; mode=block",
+	"x-content-type-options": "nosniff",
+	"content-type": "application/json; charset=utf-8",
+	"etag": "W/\"de2d13c3a4f5269295f5ceec70649c3b\"",
+	"cache-control": "max-age=0, private, must-revalidate",
+	"x-request-id": "606879f2-710a-427c-9999-1aba96f3ac74",
+	"x-runtime": "0.002793",
+	"transfer-encoding": "chunked",
+	"via": "1.1 vegur"
+}
+end of log at: 1504980228535
 
-Date: 1504909416708
+Date: 1504980249139
 Response Status Code: 200
-Response Headers: {"server":"Cowboy","date":"Fri, 08 Sep 2017 22:23:36 GMT","connection":"close","x-frame-options":"SAMEORIGIN","x-xss-protection":"1; mode=block","x-content-type-options":"nosniff","content-type":"application/json; charset=utf-8","etag":"W/\"de2d13c3a4f5269295f5ceec70649c3b\"","cache-control":"max-age=0, private, must-revalidate","x-request-id":"232f2353-fff4-4c08-b3d7-2b007eb5f8fe","x-runtime":"0.004462","transfer-encoding":"chunked","via":"1.1 vegur"}
-end of log at: 1504909416708
+Response Headers: {
+	"server": "Cowboy",
+	"date": "Sat, 09 Sep 2017 18:04:08 GMT",
+	"connection": "close",
+	"x-frame-options": "SAMEORIGIN",
+	"x-xss-protection": "1; mode=block",
+	"x-content-type-options": "nosniff",
+	"content-type": "application/json; charset=utf-8",
+	"etag": "W/\"de2d13c3a4f5269295f5ceec70649c3b\"",
+	"cache-control": "max-age=0, private, must-revalidate",
+	"x-request-id": "8d603f58-b99f-4991-9cd0-b659a3fd1fc2",
+	"x-runtime": "0.002793",
+	"transfer-encoding": "chunked",
+	"via": "1.1 vegur"
+}
+end of log at: 1504980249139
+
+Date: 1504980444497
+Response Status Code: 200
+Response Headers: {
+	"server": "Cowboy",
+	"date": "Sat, 09 Sep 2017 18:07:23 GMT",
+	"connection": "close",
+	"x-frame-options": "SAMEORIGIN",
+	"x-xss-protection": "1; mode=block",
+	"x-content-type-options": "nosniff",
+	"content-type": "application/json; charset=utf-8",
+	"etag": "W/\"de2d13c3a4f5269295f5ceec70649c3b\"",
+	"cache-control": "max-age=0, private, must-revalidate",
+	"x-request-id": "98763d27-653f-406a-9363-06fac345c7f9",
+	"x-runtime": "0.003132",
+	"transfer-encoding": "chunked",
+	"via": "1.1 vegur"
+}
+end of log at: 1504980444497
+
+Date: 1504980462968
+Response Status Code: 200
+Response Headers: {
+	"server": "Cowboy",
+	"date": "Sat, 09 Sep 2017 18:07:42 GMT",
+	"connection": "close",
+	"x-frame-options": "SAMEORIGIN",
+	"x-xss-protection": "1; mode=block",
+	"x-content-type-options": "nosniff",
+	"content-type": "application/json; charset=utf-8",
+	"etag": "W/\"de2d13c3a4f5269295f5ceec70649c3b\"",
+	"cache-control": "max-age=0, private, must-revalidate",
+	"x-request-id": "c9f8417d-f38a-47fb-b6f2-4a16c473ad53",
+	"x-runtime": "0.005865",
+	"transfer-encoding": "chunked",
+	"via": "1.1 vegur"
+}
+end of log at: 1504980462968
+
+Date: 1504980494729
+Response Status Code: 200
+Response Headers: {
+	"server": "Cowboy",
+	"date": "Sat, 09 Sep 2017 18:08:14 GMT",
+	"connection": "close",
+	"x-frame-options": "SAMEORIGIN",
+	"x-xss-protection": "1; mode=block",
+	"x-content-type-options": "nosniff",
+	"content-type": "application/json; charset=utf-8",
+	"etag": "W/\"de2d13c3a4f5269295f5ceec70649c3b\"",
+	"cache-control": "max-age=0, private, must-revalidate",
+	"x-request-id": "c415af06-8664-4b06-ae0a-73b428805b32",
+	"x-runtime": "0.002661",
+	"transfer-encoding": "chunked",
+	"via": "1.1 vegur"
+}
+end of log at: 1504980494729
+
+Date: 1504980818010
+Response Status Code: 200
+Response Headers: {
+	"server": "Cowboy",
+	"date": "Sat, 09 Sep 2017 18:13:37 GMT",
+	"connection": "close",
+	"x-frame-options": "SAMEORIGIN",
+	"x-xss-protection": "1; mode=block",
+	"x-content-type-options": "nosniff",
+	"content-type": "application/json; charset=utf-8",
+	"etag": "W/\"de2d13c3a4f5269295f5ceec70649c3b\"",
+	"cache-control": "max-age=0, private, must-revalidate",
+	"x-request-id": "c6839298-6438-4daa-81a6-d7590c0d526f",
+	"x-runtime": "0.008727",
+	"transfer-encoding": "chunked",
+	"via": "1.1 vegur"
+}
+end of log at: 1504980818010
 
