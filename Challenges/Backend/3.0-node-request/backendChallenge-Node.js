@@ -6,38 +6,104 @@ Assumptions:
 4. the type field in the provided validation constraints, when provided, only specifies string, number, or boolean. Behavior is undefined.
 */
 
+"use strict";
+
+var request = require('request');
+
 let output = {invalid_customers: []};
 
-let apiEndpointURL = "https://backend-challenge-winter-2017.herokuapp.com/customers.json";
-
-let apiEndpointURLSuffix = "?page=";
-
-let request = require("request");
-
-/*//TODO make async
-//TODO explore whether we can get async validation as the data comes in
-function httpGet(theUrl)
-{
-    let xmlHttp = new XMLHttpRequest();
-    xmlHttp.open( "GET", theUrl, false ); // false for synchronous request
-    xmlHttp.send( null );
-    return xmlHttp.responseText;
-}*/
+let apiEndpointURL = "https://backend-challenge-winter-2017.herokuapp.com/customers.json?page=";
 
 let pages = [];
 
-//getting the 0th page of input data
-pages[0] = JSON.parse(httpGet(apiEndpointURL));
+/*request(apiEndpointURL + '0', function (error, response, body) {
+  if (error)
+  {
+    console.log('error:', error); // Print the error if one occurred
+    return;
+  }
+
+  console.log('statusCode:', response && response.statusCode);
+  console.log('body: ', body + "\n\n");
+  //getting the 0th page of input data
+  pages.push(JSON.parse(body));
+});*/
+
+//must put requests in functions; need callback structure for proper async
+
+
+let callback = function(numPages)
+{
+  //don't need the 1st page, already got!
+  for (let i = 1; i < numPages; ++i)
+  {
+    request(apiEndpointURL + i, function (error, response, body) {
+      if (error)
+      {
+        console.log('error:', error); // Print the error if one occurred
+        return;
+      }
+
+      console.log('statusCode:', response && response.statusCode);
+      console.log('body: ', body + "\n\n");
+      //getting the 0th page of input data
+      pages[i] = (JSON.parse(body));
+    });
+  }
+}
+
 
 //figuring out how many pages there are
-let numPages = Math.ceil(pages[0].pagination.total / pages[0].pagination.per_page);
+let calculateTotalPages = function(apiEndpointURL)
+{
+  /*hardcoded 0th page determines pagination for entire set of pages
+  this means if there is inconsistent pagination between pages in a set,
+  whatever is on page 0 is the one we go with.
+  Given the lack of opportunity to ask for clarification in terms of desired
+  behavior for this scenario, this is okay.
+  This would also not be difficult to change if necessary. */
 
+  request(apiEndpointURL + '0', function (error, response, body) {
+    if (error)
+    {
+      console.log('error:', error); // Print the error if one occurred
+      return;
+    }
+
+    console.log('statusCode:', response && response.statusCode);
+    console.log('body: ', body + "\n\n");
+    //getting the 0th page of input data
+    pages.push(JSON.parse(body));
+
+    let numPages = Math.ceil(pages[0].pagination.total / pages[0].pagination.per_page);
+
+    callback(numPages);
+  });
+}
+
+
+calculateTotalPages(apiEndpointURL);
+
+console.log(pages);
+/*
 //works: Math.ceil(page0.pagination.total / page0.pagination.per_page);
 //JSON.parse('{"result":1}')        don't forget the '' outside the braces
 
 let  paginatedURL = "";
 
-for (let  i = 1; i < numPages; i++)
+for (let i = 1; i < numPages; ++i)
+{
+  request(apiEndpointURL + i, function (error, response, body) {
+    console.log('error:', error); // Print the error if one occurred
+    console.log('statusCode:', response && response.statusCode);
+    console.log('body: ', body + "\n\n");
+    pages[i] = body;
+  });
+}
+
+console.log(pages);
+
+/*for (let  i = 1; i < numPages; i++)
 {
   paginatedURL = apiEndpointURL + apiEndpointURLSuffix + (i + 1).toString();        //i + 1 because the page count starts at 1, whereas indices start at 0
   pages[i] = JSON.parse(httpGet(paginatedURL));
@@ -128,4 +194,4 @@ for (let i = 0; i < pages.length; ++i)
   validateCustomerPage(pages[i]);
 }
 
-console.log(output);
+console.log(output);*/
