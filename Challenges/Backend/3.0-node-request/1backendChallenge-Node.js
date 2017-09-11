@@ -90,7 +90,16 @@ let callback = function(numPages)
 
   }
   else {
-    console.log(pages);
+    for (let i = 0; i < pages.length; ++i)
+    {
+      validateCustomerPage(pages[i]);
+    }
+
+    console.log(output);
+    for (var i = 0; i < output.invalid_customers.length; ++i)
+    {
+      console.log(output.invalid_customers[i] + "\n\n\n");      //TODO I'M HERE NOW, NEED TO PUT IT AS A STRING
+    }
     return;
   }
 }
@@ -99,32 +108,6 @@ let callback = function(numPages)
 
 
 calculateTotalPages(apiEndpointURL);
-/*
-//works: Math.ceil(page0.pagination.total / page0.pagination.per_page);
-//JSON.parse('{"result":1}')        don't forget the '' outside the braces
-
-let  paginatedURL = "";
-
-for (let i = 1; i < numPages; ++i)
-{
-  request(apiEndpointURL + i, function (error, response, body) {
-    console.log('error:', error); // Print the error if one occurred
-    console.log('statusCode:', response && response.statusCode);
-    console.log('body: ', body + "\n\n");
-    pages[i] = body;
-  });
-}
-
-console.log(pages);
-
-/*for (let  i = 1; i < numPages; i++)
-{
-  paginatedURL = apiEndpointURL + apiEndpointURLSuffix + (i + 1).toString();        //i + 1 because the page count starts at 1, whereas indices start at 0
-  pages[i] = JSON.parse(httpGet(paginatedURL));
-}
-
-//TODO remove
-let a = 0;
 
 function validateCustomerPage(page)
 {
@@ -201,11 +184,3 @@ function reportInvalidCustomerFields(customer, field)
     output.invalid_customers.push({"id": customer.id, "invalid_fields": [field]});
   }
 }
-
-
-for (let i = 0; i < pages.length; ++i)
-{
-  validateCustomerPage(pages[i]);
-}
-
-console.log(output);*/
