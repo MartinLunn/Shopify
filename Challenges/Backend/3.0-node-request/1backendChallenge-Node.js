@@ -4,13 +4,13 @@ Assumptions:
 2. Assuming validations are consistent between pages for a given URL or set of pages
 3. No property in validations can be called __proto__ or something like that
 4. the type field in the provided validation constraints, when provided, only specifies string, number, or boolean. Behavior is undefined.
+5. If the validation for a field is no present, anything goes.
+6. When the field is not required, 
 */
 
 "use strict";
 
 var request = require('request');
-
-var DEBUG = false;
 
 let output = {invalid_customers: []};
 
@@ -19,6 +19,12 @@ let apiEndpointURL = "https://backend-challenge-winter-2017.herokuapp.com/custom
 let pages = [];
 
 let pageCounter = 1;
+
+//Because I'm using node's async features, all we need to do is call this
+//and the rest will chain on. I could put this into a control objects
+//for better respect of software engineering principles, but 
+//those depend on context; this has no context really.
+calculateTotalPages(apiEndpointURL);
 
 //figuring out how many pages there are
 let calculateTotalPages = function(apiEndpointURL)
@@ -33,15 +39,9 @@ let calculateTotalPages = function(apiEndpointURL)
   request(apiEndpointURL + pageCounter, function (error, response, body) {
     if (error)
     {
-      console.log('error:', error); // Print the error if one occurred
+      console.error('error:', error); // Print the error if one occurred
       return;
     }
-
-    if (DEBUG)
-      console.log('statusCode:', response && response.statusCode);
-
-    if (DEBUG)
-      console.log('body: ', body + "\n\n");
 
     pages = [];
     pages[0] = JSON.parse(body);
@@ -63,29 +63,15 @@ let callback = function(numPages)
     request(apiEndpointURL + pageCounter, function (error, response, body) {
       if (error)
       {
-        console.log('error:', error); // Print the error if one occurred
+        console.error('error:', error); // Print the error if one occurred
         return;
       }
-
-      if (DEBUG)
-        console.log("pageCounter: " + pageCounter + "\n");
-
-      if (DEBUG)
-        console.log('statusCode:', response && response.statusCode);
-
-      if (DEBUG)
-        console.log('body: ', body + "\n\n");
-
+      //indexing starts at 0, pages start at 1.
       pages[pageCounter - 1] = JSON.parse(body);
-
-
-      if (DEBUG)
-        console.log("pages: " + pages + "\n\n");
-
       ++pageCounter;
-
       callback(numPages);
-
+      //I picked this recursive callback structure because of it's similarity to a while loop
+      //which is basically exactly what I wanted.
     });
 
   }
@@ -94,55 +80,35 @@ let callback = function(numPages)
     {
       validateCustomerPage(pages[i]);
     }
-
-    //console.log(output);
-
     printOutput(output);
-
-
-    /*for (var i = 0; i < output.invalid_customers.length; ++i)
-    {
-      console.log(JSON.stringify(output.invalid_customers[i]) + "\n");      //TODO I'M HERE NOW, NEED TO PUT IT AS A STRING
-    }*/
     return;
   }
 }
-
-
-
-
-calculateTotalPages(apiEndpointURL);
 
 let validateCustomerPage = function(page)
 {
   if (!page)
   {
-    //TODO error handle
-    console.log("page is falsy from inside validate customer page.");
+    console.error("page is falsy from inside validate customer page.");
     return;
   }
 
-  if (!(page.validations && page.customers && page.pagination))     //if page doesn't have all of these. syntax is such due to faster short-circuit evaluation
+  //if page doesn't have all of these. syntax is such due to faster short-circuit evaluation
+  if (!(page.validations && page.customers && page.pagination))     
   {
-
-    console.log("aa");
-
-
-    //TODO error handle
-    console.log("page object is missing keys or no validations listed from inside validate customer page");
+    console.error("page object is missing keys or no validations listed from inside validate customer page");
     return;
   }
 
   for (let i = 0; i < page.customers.length; ++i)   //main loop validating customers
   {
-
     for (let j = 0; j < page.validations.length; ++j)
     {
       let  nameOfField = Object.keys(page.validations[j])[0];  //get the field name
-
       let  validation = page.validations[j][nameOfField];
-
-      if (validation.required && !page.customers[i].hasOwnProperty(nameOfField) )  //if field is required and not present. also quick because of short-circuit. note that this DOES NOT work for inherited properties, but is faster than using "in" which is alternate
+      //if field is required and not present. also quick because of short-circuit. 
+      //note that this DOES NOT work for inherited properties, but is faster than using "in" which is alternate
+      if (validation.required && !page.customers[i].hasOwnProperty(nameOfField) )  
       {
         //TODO
         //console.log
@@ -155,7 +121,8 @@ let validateCustomerPage = function(page)
         //if the customer data is null, cannot get length, therefore must check first
         let strlen;
         page.customers[i][nameOfField] ? strlen = page.customers[i][nameOfField].length : reportInvalidCustomerFields(page.customers[i], nameOfField);
-        if (strlen >  validation.length.max || strlen < validation.length.min) //If length is greater than max, or lesser than min. short-circuit works properly
+        //If length is greater than max, or lesser than min. short-circuit works properly
+        if (strlen >  validation.length.max || strlen < validation.length.min) 
         {
           //TODO
           //console.log
@@ -190,30 +157,31 @@ let reportInvalidCustomerFields = function (customer, field)
 }
 
 let printOutput = function(output)      /*console.log() wasn't playing nice
-it was outputting [Object object] if I passed in anything but exactly one object
+it was outputting [Object object] if I passed in anything but exactly one object,
+and it was adding newlines at the end of every statement so,
 I decided to do my own.*/
 {
   if (!output)
   {
-    console.log("Output is null from inside printOutput.\n");
+    console.error("Output is null from inside printOutput.\n");
     return;
   }
 
   if (typeof(output) !== "object")
   {
-    console.log("Output is not an object from inside printOutput. \n");
+    console.error("Output is not an object from inside printOutput. \n");
     return;
   }
 
   if (!output.hasOwnProperty("invalid_customers"))
   {
-    console.log("Output is not properly formatted from inside printOutput. \n");
+    console.error("Output is not properly formatted from inside printOutput. \n");
     return;
   }
 
   if (!Array.isArray(output.invalid_customers))
   {
-    console.log("Invalid customers is not an array from inside printOutput. \n");
+    console.error("Invalid customers is not an array from inside printOutput. \n");
     return;
   }
 
@@ -230,7 +198,7 @@ I decided to do my own.*/
   {
     if (typeof(output.invalid_customers[i]) !== "object")
     {
-      console.log("output.invalid_customers[" + i + "] is not an object from inside printOutput.\n")
+      console.error("output.invalid_customers[" + i + "] is not an object from inside printOutput.\n")
       continue;
     }
 
@@ -241,6 +209,7 @@ I decided to do my own.*/
 
     process.stdout.write("      ");
     console.log(output.invalid_customers[i]);
+    //couldn't quite get this to work properly. It's missing commas.
     //process.stdout.write(",");
   }
 
