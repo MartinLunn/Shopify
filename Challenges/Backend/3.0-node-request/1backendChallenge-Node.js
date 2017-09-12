@@ -3,9 +3,12 @@ Assumptions:
 1. Assuming pagination is consistent between pages with regard to total and per_page
 2. Assuming validations are consistent between pages for a given URL or set of pages
 3. No property in validations can be called __proto__ or something like that
-4. the type field in the provided validation constraints, when provided, only specifies string, number, or boolean. Behavior is undefined.
+4. the type field in the provided validation constraints, when provided, only specifies string, number, or boolean. Otherwise, behavior is undefined.
 5. If the validation for a field is no present, anything goes.
-6. When the field is not required, 
+
+TODO double check weirdness with null and not required fields
+6. When the field is not required, but the type is specified, null is not a valid value
+7. If the field is not required, undefined is the only acceptable non-answer.
 */
 
 "use strict";
