@@ -2,11 +2,11 @@ WHAT KIND OF PROBLEMS DO YOU LOVE SOLVING? LET US KNOW WHICH OF THE FOLLOWING DI
 
 Why?
 Backend Development
-I've always loved getting my hands dirty, getting into the nuts and bolts of the problem. Software development is no exception; my passion is solving problems, and getting things to work. Both my skills and experience make my strength the more technical side of development. I have strong background in Algorithms and data structures (having gotten the second highest grade in my algorithms class and working the summer in an algorithms lab), and I have a strong background in Software Engineering (I'm a TA). 
+	I've always loved getting my hands dirty, getting into the nuts and bolts of the problem. Software development is no exception; my passion is solving problems, and getting things to work. Both my skills and experience make my strength the more technical side of development. I have strong background in Algorithms and data structures (having gotten the second highest grade in my algorithms class and working the summer in an algorithms lab), and I have a strong background in Software Engineering (I'm a TA). 
 
-While backend development might be a very general and straightforward choice for me, I also feel I have skills and experience in other areas, mainly frontend. The best feeling is watching someone use your web app, and them intuitively and quickly figuring out how to use a very complex system because you've carefully designed the frontend/ui/ux. 
+	While backend development might be a very general and straightforward choice for me, I also feel I have skills and experience in other areas, mainly frontend. The best feeling is watching someone use your web app, and them intuitively and quickly figuring out how to use a very complex system because you've carefully designed the frontend/ui/ux. 
 
-My experience this summer, where I had to be a frontend dev, backend dev, everything-in-between-dev, accessibility expert, graphic designer, network engineer, manager, and much more has really taught me a lot about what it means to be not just a full stack developer, but a tech problem solver. 
+	My experience this summer, where I had to be a frontend dev, backend dev, everything-in-between-dev, accessibility expert, graphic designer, network engineer, manager, and much more has really taught me a lot about what it means to be not just a full stack developer, but a tech problem solver. 
 
 IF YOU’VE MET US AT AN EVENT OR 
 INFO SESSION, OR HEARD ABOUT US THROUGH AN ORGANIZATION 
@@ -40,3 +40,12 @@ Refferals
 
 
 Additional Information
+
+
+I've always loved getting my hands dirty, getting into the nuts and bolts of the problem. Software development is no exception; my passion is solving problems, and getting things to work. Both my skills and experience make my strength the more technical side of development. 
+
+I have strong background in algorithms and data structures, having achieved the second highest mark in my algorithms and data structures class of 350+ students, and working this summer in an algorithms and data structures lab (only 3 students were invited); I know how to code efficiently. Efficiency isn't the only factor though, coding properly is important too. Being a software engineering TA, I see firsthand the results of when devs ignore software engineering principles and processes. 
+
+While backend development might be a very general and straightforward choice for me, I also feel I have skills and experience in other areas, mainly frontend. Unfortunately, I'm lacking in the artistic department. The best feeling is watching someone use your web app, and them intuitively and quickly figuring out how to use a very complex system because you've carefully designed the frontend/ui/ux. 
+
+My experience this summer where I had to be a frontend dev, backend dev, everything-in-between-dev, accessibility expert, graphic designer, network engineer, manager, inter-team coordinator, communications specialist, and much more has really taught me a lot about what it means to be not just a full stack developer, but a tech problem solver. 
