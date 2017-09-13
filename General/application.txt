@@ -2,7 +2,7 @@ WHAT KIND OF PROBLEMS DO YOU LOVE SOLVING? LET US KNOW WHICH OF THE FOLLOWING DI
 
 Why?
 Backend Development
-I've always loved getting my hands dirty, getting into the nuts and bolts of the problem. Software development is no exception; my passion is solving problems, and getting things to work. Both my skills and experience make my strength the more technical side of development. I have strong background in Algorithms and data structures (having gotten the second highest grade in my class and working the summer in an algorithms lab), and I have a strong background in Software Engineering (I'm a TA). 
+I've always loved getting my hands dirty, getting into the nuts and bolts of the problem. Software development is no exception; my passion is solving problems, and getting things to work. Both my skills and experience make my strength the more technical side of development. I have strong background in Algorithms and data structures (having gotten the second highest grade in my algorithms class and working the summer in an algorithms lab), and I have a strong background in Software Engineering (I'm a TA). 
 
 While backend development might be a very general and straightforward choice for me, I also feel I have skills and experience in other areas, mainly frontend. The best feeling is watching someone use your web app, and them intuitively and quickly figuring out how to use a very complex system because you've carefully designed the frontend/ui/ux. 
 
