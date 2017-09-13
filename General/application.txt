@@ -2,14 +2,14 @@ WHAT KIND OF PROBLEMS DO YOU LOVE SOLVING? LET US KNOW WHICH OF THE FOLLOWING DI
 
 Why?
 Backend Development
-	I've always loved getting my hands dirty, getting into the nuts and bolts of the problem. Software development is no exception; my passion is solving problems, and getting things to work. Both my skills and experience make my strength the more technical side of development. I have strong background in Algorithms and data structures (having gotten the second highest grade in my algorithms class and working the summer in an algorithms lab), and I have a strong background in Software Engineering (I'm a TA). 
+I've always loved getting my hands dirty, getting into the nuts and bolts of the problem. Software development is no exception; my passion is solving problems, and getting things to work. Both my skills and experience make my strength the more technical side of development. I have strong background in Algorithms and data structures (having gotten the second highest grade in my algorithms class and working the summer in an algorithms lab), and I have a strong background in Software Engineering (I'm a TA).
 
-	While backend development might be a very general and straightforward choice for me, I also feel I have skills and experience in other areas, mainly frontend. The best feeling is watching someone use your web app, and them intuitively and quickly figuring out how to use a very complex system because you've carefully designed the frontend/ui/ux. 
+While backend development might be a very general and straightforward choice for me, I also feel I have skills and experience in other areas, mainly frontend. The best feeling is watching someone use your web app, and them intuitively and quickly figuring out how to use a very complex system because you've carefully designed the frontend/ui/ux.
 
-	My experience this summer, where I had to be a frontend dev, backend dev, everything-in-between-dev, accessibility expert, graphic designer, network engineer, manager, and much more has really taught me a lot about what it means to be not just a full stack developer, but a tech problem solver. 
+My experience this summer, where I had to be a frontend dev, backend dev, everything-in-between-dev, accessibility expert, graphic designer, network engineer, manager, and much more has really taught me a lot about what it means to be not just a full stack developer, but a tech problem solver.
 
-IF YOU’VE MET US AT AN EVENT OR 
-INFO SESSION, OR HEARD ABOUT US THROUGH AN ORGANIZATION 
+IF YOU’VE MET US AT AN EVENT OR
+INFO SESSION, OR HEARD ABOUT US THROUGH AN ORGANIZATION
 (I.E. LADIES LEARNING CODE, OUTREACHY, ETC. ) LET US KNOW:
 
 SSSC -> net Night
@@ -20,7 +20,7 @@ BUILD A SHOPIFY STORE
 https://munnbelievable-world.myshopify.com/
 
 TECHNICAL PROBLEM SOLVING 💻
-Which of the technical problem(s) linked in the 
+Which of the technical problem(s) linked in the
 document on the application page did you complete and why?
 
 Backend
@@ -33,7 +33,9 @@ Why?
 
 Pitch us your idea, how you'd build it, and why:
 
+Ever had a cashier ask you "would you like your copy of the receipt?" I hear that every day. I want to be able to track my purchases, even the cash ones, without bogging down my wallet, or having organize thousands of receipts. This is especially important for products that have a warranty. Often, if you don't have the original receipt, the warranty is invalid. For products with a lifetime warranty, you could've bought it decades ago! It doesn't make sense to keep receipts for 20 years. As an additional feature, I'd love to be able to integrate it with a spreadsheet application, for easy budgeting.
 
+One of the chief technical requirement of this mobile app, is being able to take a picture with your smartphone, and having a readable digital copy. We would probably need to use some lightweight computer vision API or framework, for document straightening. We also need a way to store and organize the data. We also need a frontend. In terms of how specifically I would organize and implement these, I would use as few software engineering processes; it's a hack day. I would basically start coding these various parts, in order, running some quick tests to make sure they're working. From there on out, it's pretty simple CRUD operations.
 
 Refferals
 
@@ -42,10 +44,10 @@ Refferals
 Additional Information
 
 
-I've always loved getting my hands dirty, getting into the nuts and bolts of the problem. Software development is no exception; my passion is solving problems, and getting things to work. Both my skills and experience make my strength the more technical side of development. 
+I've always loved getting my hands dirty, getting into the nuts and bolts of the problem. Software development is no exception; my passion is solving problems, and getting things to work. Both my skills and experience make my strength the more technical side of development.
 
-I have strong background in algorithms and data structures, having achieved the second highest mark in my algorithms and data structures class of 350+ students, and working this summer in an algorithms and data structures lab (only 3 students were invited); I know how to code efficiently. Efficiency isn't the only factor though, coding properly is important too. Being a software engineering TA, I see firsthand the results of when devs ignore software engineering principles and processes. 
+I have strong background in algorithms and data structures, having achieved the second highest mark in my algorithms and data structures class of 350+ students, and working this summer in an algorithms and data structures lab (only 3 students were invited); I know how to code efficiently. Efficiency isn't the only factor though, coding properly is important too. Being a software engineering TA, I see firsthand the results of when devs ignore software engineering principles and processes.
 
-While backend development might be a very general and straightforward choice for me, I also feel I have skills and experience in other areas, mainly frontend. Unfortunately, I'm lacking in the artistic department. The best feeling is watching someone use your web app, and them intuitively and quickly figuring out how to use a very complex system because you've carefully designed the frontend/ui/ux. 
+While backend development might be a very general and straightforward choice for me, I also feel I have skills and experience in other areas, mainly frontend. Unfortunately, I'm lacking in the artistic department. The best feeling is watching someone use your web app, and them intuitively and quickly figuring out how to use a very complex system because you've carefully designed the frontend/ui/ux.
 
-My experience this summer where I had to be a frontend dev, backend dev, everything-in-between-dev, accessibility expert, graphic designer, network engineer, manager, inter-team coordinator, communications specialist, and much more has really taught me a lot about what it means to be not just a full stack developer, but a tech problem solver. 
+My experience this summer where I had to be a frontend dev, backend dev, everything-in-between-dev, accessibility expert, graphic designer, network engineer, manager, inter-team coordinator, communications specialist, and much more has really taught me a lot about what it means to be not just a full stack developer, but a tech problem solver.

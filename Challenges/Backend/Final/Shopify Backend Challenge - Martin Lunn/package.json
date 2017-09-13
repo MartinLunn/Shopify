@@ -1,0 +1,27 @@
+{
+  "name": "shopify-backend-challenge-winter18",
+  "version": "1.0.0",
+  "description": "dynamic field validation",
+  "main": "backendChallenge-Node.js",
+  "dependencies": {},
+  "devDependencies": {},
+  "scripts": {
+    "test": "node backendChallenge-Node.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MartinLunn/Shopify.git"
+  },
+  "keywords": [
+    "challenge",
+    "shopify",
+    "backend",
+    "winter2018"
+  ],
+  "author": "Martin Lunn",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MartinLunn/Shopify/issues"
+  },
+  "homepage": "https://github.com/MartinLunn/Shopify#readme"
+}

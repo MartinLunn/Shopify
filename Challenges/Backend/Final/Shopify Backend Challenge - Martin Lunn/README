@@ -1,0 +1,13 @@
+Documentation for Martin Lunn's Shopify Backend Challenge
+Application for Winter 2017
+
+Date Due: Thursday, September 14th, 2017
+
+Author: Martin Lunn (martin.lunn[at]hotmail.com)
+
+Operating Instructions:
+If necessary, download and install node 6.
+
+type
+node shopifyBackendChallenge-MartinLunn.shopifyBackendChallenge-MartinLunn.js
+into a BASH terminal.
