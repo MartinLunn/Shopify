@@ -19,13 +19,15 @@ let output = {invalid_customers: []};
 
 let apiEndpointURL = "https://backend-challenge-winter-2017.herokuapp.com/customers.json?page=";
 
+//pages is an array where each index represents a page of data from the api endpoint
 let pages = [];
 
+//pageCounter is a variable representing which page of the api endpoint 
 let pageCounter = 1;
 
 //Because I'm using node's async features, all we need to do is call this
 //and the rest will chain on. I could put this into a control objects
-//for better respect of software engineering principles, but 
+//for improved adherence to software engineering principles, but 
 //those depend on context; this has no context really.
 calculateTotalPages(apiEndpointURL);
 
@@ -53,6 +55,8 @@ let calculateTotalPages = function(apiEndpointURL)
 
     ++pageCounter;
 
+    //callback is a function that, given the number of pages, populates the array of pages
+    //from the api endpoint, not including the 1st.
     callback(numPages);
   });
 }
@@ -78,6 +82,7 @@ let callback = function(numPages)
     });
 
   }
+  //else, for every page, validate the customer page
   else {
     for (let i = 0; i < pages.length; ++i)
     {
@@ -113,8 +118,6 @@ let validateCustomerPage = function(page)
       //note that this DOES NOT work for inherited properties, but is faster than using "in" which is alternate
       if (validation.required && !page.customers[i].hasOwnProperty(nameOfField) )  
       {
-        //TODO
-        //console.log
         reportInvalidCustomerFields(page.customers[i], nameOfField);
       }
 
@@ -127,8 +130,6 @@ let validateCustomerPage = function(page)
         //If length is greater than max, or lesser than min. short-circuit works properly
         if (strlen >  validation.length.max || strlen < validation.length.min) 
         {
-          //TODO
-          //console.log
           reportInvalidCustomerFields(page.customers[i], nameOfField);
         }
       }
@@ -138,8 +139,6 @@ let validateCustomerPage = function(page)
         if (validation.type !== typeof(page.customers[i][nameOfField]))    //else if because length assumes string meaning if length exists, it can be assumed to be a string.
         //above statement: if the given validation type constraint matches the type of the customers data
         {
-          //TODO
-          //console.log
           reportInvalidCustomerFields(page.customers[i], nameOfField);
         }
       }
@@ -213,6 +212,8 @@ I decided to do my own.*/
     process.stdout.write("      ");
     console.log(output.invalid_customers[i]);
     //couldn't quite get this to work properly. It's missing commas.
+	  //The requirements specified an output "similar to" this. 
+	  //Based on the instructions, I believe this is acceptable.
     //process.stdout.write(",");
   }
 
